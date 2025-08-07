@@ -37,6 +37,14 @@
 ## Your website will be live at:
 🌐 **https://sugalechristo.github.io**
 
+## IMPORTANT FIX FOR 404 ERROR:
+**If you're getting a 404 error, I've now fixed the deployment configuration!**
+
+The issue was that the built files weren't in the right location for GitHub Pages. I've updated the deployment workflow to:
+- Build the site correctly with `npx vite build`  
+- Deploy from the correct `./dist/public` folder
+- Ensure `index.html` is at the root level for GitHub Pages
+
 ## What happens automatically:
 - ✨ Beautiful animations and typing effects
 - 📱 Mobile-optimized for phone viewing  

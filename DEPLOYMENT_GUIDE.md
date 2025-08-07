@@ -57,7 +57,19 @@ https://sugalechristo.github.io
 
 ## Troubleshooting
 
-If deployment fails:
+**FIXED: 404 Error Solution**
+If you got a 404 error, I've now fixed the deployment configuration. The updated `.github/workflows/deploy.yml` file now:
+- Builds correctly with Vite
+- Deploys from the right folder (`./dist/public`)
+- Ensures `index.html` is at root level for GitHub Pages
+
+**To apply the fix:**
+1. Download the updated project files from Replit (with the fixed `.github/workflows/deploy.yml`)
+2. Replace the files in your GitHub repository
+3. Commit the changes - this will trigger a new deployment
+4. Wait 2-3 minutes for the deployment to complete
+
+If deployment still fails:
 1. Check the "Actions" tab in your GitHub repository
 2. Make sure your repository is public
 3. Ensure all files uploaded correctly
