@@ -76,7 +76,7 @@ export default function HeroSection() {
               <Button 
                 variant="outline"
                 asChild
-                className="border-2 border-white text-white hover:bg-white hover:text-primary transition-colors font-medium px-8 py-3"
+                className="border-2 border-white text-primary bg-white hover:bg-transparent hover:text-white transition-colors font-medium px-8 py-3"
               >
                 <a href="#about">
                   <i className="fas fa-user mr-2"></i>
@@ -96,9 +96,18 @@ export default function HeroSection() {
             <div className="relative">
               <div className="w-48 h-48 md:w-64 md:h-64 mx-auto rounded-full overflow-hidden border-4 border-white/30 shadow-2xl">
                 <img 
-                  src="/attached_assets/PXL_20240208_113856417.PORTRAIT~2_1754547391025.jpg" 
+                  src="/professional-photo.jpg" 
                   alt="S Sugale Christo - Professional Photo" 
                   className="w-full h-full object-cover"
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    console.error('Image failed to load:', target.src);
+                    // Fallback if image doesn't load
+                    target.style.display = 'none';
+                    if (target.parentElement) {
+                      target.parentElement.innerHTML = '<div class="w-full h-full bg-white/20 flex items-center justify-center"><i class="fas fa-user text-6xl text-white/50"></i></div>';
+                    }
+                  }}
                 />
               </div>
               {/* Decorative ring */}
