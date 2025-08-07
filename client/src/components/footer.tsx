@@ -27,14 +27,22 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-dark text-white py-8 no-print">
-      <div className="container mx-auto px-6">
+    <footer className="relative bg-gradient-to-r from-primary via-blue-800 to-purple-900 text-white py-12 no-print overflow-hidden">
+      {/* Background decorative elements */}
+      <div className="absolute inset-0">
+        <div className="absolute top-4 left-10 w-24 h-24 bg-white/10 rounded-full blur-xl animate-pulse"></div>
+        <div className="absolute bottom-8 right-16 w-32 h-32 bg-blue-300/20 rounded-full blur-2xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-purple-300/20 rounded-full blur-lg animate-pulse" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute bottom-4 left-1/3 w-20 h-20 bg-white/5 rounded-full blur-xl animate-pulse" style={{ animationDelay: '0.5s' }}></div>
+      </div>
+      
+      <div className="container mx-auto mobile-container relative z-10">
         <div className="text-center">
           <motion.h3 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-2xl font-bold mb-2"
+            className="text-2xl md:text-3xl font-bold mb-2"
           >
             S Sugale Christo
           </motion.h3>
@@ -44,7 +52,7 @@ export default function Footer() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-gray-300 mb-4"
+            className="text-blue-100 mb-6 text-lg"
           >
             Marketing & HR Professional | E-commerce Specialist
           </motion.p>
@@ -54,7 +62,7 @@ export default function Footer() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="flex justify-center space-x-6 mb-4"
+            className="flex justify-center space-x-8 mb-6"
           >
             {socialLinks.map((link, index) => (
               <motion.a
@@ -67,10 +75,10 @@ export default function Footer() {
                 viewport={{ once: true }}
                 transition={{ delay: 0.3 + (index * 0.1) }}
                 whileHover={{ scale: 1.1 }}
-                className="text-gray-300 hover:text-white transition-colors"
+                className="text-blue-100 hover:text-white transition-all duration-300 p-3 rounded-full hover:bg-white/20"
                 aria-label={link.label}
               >
-                <i className={`${link.icon} text-xl`}></i>
+                <i className={`${link.icon} text-2xl`}></i>
               </motion.a>
             ))}
           </motion.div>
@@ -80,7 +88,7 @@ export default function Footer() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.4 }}
-            className="text-gray-400 text-sm"
+            className="text-blue-200 text-sm md:text-base border-t border-white/20 pt-4 mt-4"
           >
             © {currentYear} S Sugale Christo. All rights reserved. | Ready to make an impact in your organization!
           </motion.p>
