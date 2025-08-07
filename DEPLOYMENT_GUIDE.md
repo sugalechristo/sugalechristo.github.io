@@ -1,11 +1,11 @@
-# GitHub Pages Deployment Guide
+# GitHub Pages Deployment Guide for sugalechristo.github.io
 
-Follow these steps to deploy your resume website to GitHub Pages:
+Follow these steps to deploy your resume website to your main GitHub Pages site:
 
-## Step 1: Create a GitHub Repository
+## Step 1: Create Your GitHub Pages Repository
 
 1. Go to [GitHub](https://github.com) and create a new repository
-2. Name it `resume-website` (or any name you prefer)
+2. Name it exactly `sugalechristo.github.io` (this is your GitHub username + .github.io)
 3. Make sure it's **Public** (required for free GitHub Pages)
 4. Don't initialize with README, .gitignore, or license
 
@@ -22,7 +22,7 @@ git init
 git add .
 git commit -m "Initial commit: Resume website"
 git branch -M main
-git remote add origin https://github.com/YOUR_USERNAME/resume-website.git
+git remote add origin https://github.com/sugalechristo/sugalechristo.github.io.git
 git push -u origin main
 ```
 
@@ -38,15 +38,16 @@ git push -u origin main
 
 After the GitHub Action completes (usually 2-5 minutes), your website will be available at:
 ```
-https://YOUR_USERNAME.github.io/resume-website/
+https://sugalechristo.github.io
 ```
 
 ## Important Notes
 
-- Replace `YOUR_USERNAME` with your actual GitHub username
+- The repository name must be exactly `sugalechristo.github.io` for this to work
 - Your repository must be **public** for free GitHub Pages
 - The first deployment may take a few minutes
 - Any changes you push to the `main` branch will automatically redeploy the site
+- This will be your main GitHub Pages site - perfect for showcasing your professional resume
 
 ## Files Created for Deployment
 
