@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
+import TypingAnimation from "@/components/typing-animation";
 
 export default function HeroSection() {
   return (
@@ -20,9 +21,18 @@ export default function HeroSection() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-xl md:text-2xl mb-6 text-blue-100"
+              className="text-xl md:text-2xl mb-6 text-blue-100 min-h-[2em]"
             >
-              MBA Candidate | Marketing & Human Resources Professional
+              <TypingAnimation 
+                texts={[
+                  "MBA Candidate | Marketing & HR Professional",
+                  "E-commerce Sales Specialist",
+                  "Digital Marketing Expert",
+                  "Community Leadership Advocate",
+                  "AI-Driven Content Creator"
+                ]} 
+                speed={80}
+              />
             </motion.h2>
             
             <motion.p 

@@ -6,9 +6,11 @@ import ExperienceSection from "@/components/experience-section";
 import EducationSection from "@/components/education-section";
 import SkillsSection from "@/components/skills-section";
 import CommunitySection from "@/components/community-section";
+import InterestsSection from "@/components/interests-section";
 import ContactSection from "@/components/contact-section";
 import Footer from "@/components/footer";
 import BackToTop from "@/components/back-to-top";
+import FloatingActions from "@/components/floating-actions";
 
 export default function Home() {
   useEffect(() => {
@@ -63,10 +65,12 @@ export default function Home() {
         <EducationSection />
         <SkillsSection />
         <CommunitySection />
+        <InterestsSection />
         <ContactSection />
       </main>
       <Footer />
       <BackToTop />
+      <FloatingActions />
     </div>
   );
 }

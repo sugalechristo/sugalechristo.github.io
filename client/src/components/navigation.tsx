@@ -25,6 +25,7 @@ export default function Navigation() {
     { href: "#education", label: "Education" },
     { href: "#skills", label: "Skills" },
     { href: "#community", label: "Community" },
+    { href: "#interests", label: "Interests" },
     { href: "#contact", label: "Contact" },
   ];
 

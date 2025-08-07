@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
+import SkillBar from "@/components/skill-bar";
 
 export default function SkillsSection() {
   const ref = useRef(null);
@@ -108,11 +109,40 @@ export default function SkillsSection() {
             ))}
           </div>
 
-          {/* Languages */}
+          {/* Technical Proficiency */}
           <motion.div 
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
             transition={{ duration: 0.6, delay: 0.6 }}
+            className="mt-8 bg-white rounded-xl p-8 shadow-lg card-hover"
+          >
+            <h3 className="text-xl font-bold text-primary mb-6 text-center">
+              <i className="fas fa-chart-bar mr-2"></i>
+              Technical Proficiency
+            </h3>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div>
+                <h4 className="font-semibold text-gray-800 mb-4">Marketing & E-commerce</h4>
+                <SkillBar skill="Digital Marketing" percentage={90} color="bg-blue-600" delay={0} />
+                <SkillBar skill="Shopify Management" percentage={85} color="bg-green-600" delay={0.1} />
+                <SkillBar skill="Social Media Marketing" percentage={88} color="bg-pink-600" delay={0.2} />
+                <SkillBar skill="Content Creation" percentage={92} color="bg-purple-600" delay={0.3} />
+              </div>
+              <div>
+                <h4 className="font-semibold text-gray-800 mb-4">Tools & Analytics</h4>
+                <SkillBar skill="AI Tools (ChatGPT, Claude)" percentage={86} color="bg-orange-600" delay={0.4} />
+                <SkillBar skill="Google Analytics" percentage={80} color="bg-yellow-600" delay={0.5} />
+                <SkillBar skill="Canva Design" percentage={89} color="bg-teal-600" delay={0.6} />
+                <SkillBar skill="Market Analysis" percentage={83} color="bg-indigo-600" delay={0.7} />
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Languages */}
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+            transition={{ duration: 0.6, delay: 0.8 }}
             className="mt-8 bg-white rounded-xl p-8 shadow-lg card-hover text-center"
           >
             <h3 className="text-xl font-bold text-primary mb-6">
@@ -125,7 +155,7 @@ export default function SkillsSection() {
                   key={index}
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
-                  transition={{ duration: 0.4, delay: 0.8 + (index * 0.1) }}
+                  transition={{ duration: 0.4, delay: 1.0 + (index * 0.1) }}
                   className={`${lang.color} text-white px-6 py-2 rounded-full font-medium`}
                 >
                   {lang.name} ({lang.level})
