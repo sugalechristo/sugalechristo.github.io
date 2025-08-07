@@ -7,8 +7,8 @@ export default function CommunitySection() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="community" className="py-16 bg-white">
-      <div className="container mx-auto px-6">
+    <section id="community" className="mobile-section bg-white">
+      <div className="container mx-auto mobile-container">
         <motion.h2 
           ref={ref}
           initial={{ opacity: 0, y: 30 }}
@@ -25,7 +25,7 @@ export default function CommunitySection() {
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="bg-gradient-to-r from-green-50 to-blue-50 rounded-xl p-8 card-hover"
+            className="bg-gradient-to-r from-green-50 to-blue-50 rounded-xl p-6 sm:p-8 card-hover border border-gray-200"
           >
             <div className="flex flex-wrap justify-between items-start mb-6">
               <div className="flex-1">
@@ -99,7 +99,7 @@ export default function CommunitySection() {
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="mt-8 bg-neutral rounded-xl p-8 card-hover"
+            className="mt-8 white-box p-6 sm:p-8 card-hover"
           >
             <h3 className="text-xl font-bold text-primary mb-4">
               <i className="fas fa-trophy mr-3"></i>

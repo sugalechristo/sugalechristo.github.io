@@ -40,8 +40,8 @@ export default function EducationSection() {
   ];
 
   return (
-    <section id="education" className="py-16 bg-white">
-      <div className="container mx-auto px-6">
+    <section id="education" className="mobile-section bg-white">
+      <div className="container mx-auto mobile-container">
         <motion.h2 
           ref={ref}
           initial={{ opacity: 0, y: 30 }}
@@ -64,7 +64,7 @@ export default function EducationSection() {
                 item.gradient 
                   ? 'bg-gradient-to-r from-primary/5 to-secondary/5' 
                   : 'bg-neutral'
-              } rounded-xl p-8 card-hover`}
+              } rounded-xl p-6 sm:p-8 card-hover border border-gray-200`}
             >
               <div className="flex flex-wrap justify-between items-start mb-4">
                 <div className="flex-1">

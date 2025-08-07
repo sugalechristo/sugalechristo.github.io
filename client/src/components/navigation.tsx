@@ -39,7 +39,7 @@ export default function Navigation() {
           : "bg-white/90 backdrop-blur-md shadow-lg"
       }`}
     >
-      <div className="container mx-auto px-6 py-4">
+      <div className="container mx-auto px-4 sm:px-6 py-3 sm:py-4">
         <div className="flex justify-between items-center">
           <motion.div 
             initial={{ opacity: 0, x: -20 }}

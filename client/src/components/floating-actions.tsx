@@ -33,7 +33,7 @@ export default function FloatingActions() {
   ];
 
   return (
-    <div className="fixed bottom-6 left-6 z-40 no-print">
+    <div className="fixed bottom-4 left-4 sm:bottom-6 sm:left-6 z-40 no-print">
       {/* Action Buttons */}
       <AnimatePresence>
         {isOpen && (
@@ -41,7 +41,7 @@ export default function FloatingActions() {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.8 }}
-            className="mb-4 space-y-3"
+            className="mb-3 sm:mb-4 space-y-2 sm:space-y-3"
           >
             {actions.map((action, index) => (
               <motion.div
@@ -52,7 +52,7 @@ export default function FloatingActions() {
                 transition={{ delay: index * 0.1 }}
                 className="flex items-center"
               >
-                <span className="bg-white text-gray-800 px-3 py-1 rounded-lg text-sm font-medium mr-3 shadow-lg">
+                <span className="bg-white text-gray-800 px-2 py-1 sm:px-3 rounded-lg text-xs sm:text-sm font-medium mr-2 sm:mr-3 shadow-lg">
                   {action.label}
                 </span>
                 {action.href ? (
@@ -60,14 +60,14 @@ export default function FloatingActions() {
                     href={action.href}
                     target={action.href.startsWith('http') ? '_blank' : undefined}
                     rel={action.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-                    className={`${action.color} text-white p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110`}
+                    className={`${action.color} text-white p-2.5 sm:p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110`}
                   >
                     <i className={action.icon}></i>
                   </a>
                 ) : (
                   <button
                     onClick={action.onClick}
-                    className={`${action.color} text-white p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110`}
+                    className={`${action.color} text-white p-2.5 sm:p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110`}
                   >
                     <i className={action.icon}></i>
                   </button>

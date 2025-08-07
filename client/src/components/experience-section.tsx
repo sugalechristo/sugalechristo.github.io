@@ -7,8 +7,8 @@ export default function ExperienceSection() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="experience" className="py-16 bg-gray-50">
-      <div className="container mx-auto px-6">
+    <section id="experience" className="mobile-section bg-gray-50">
+      <div className="container mx-auto mobile-container">
         <motion.h2 
           ref={ref}
           initial={{ opacity: 0, y: 30 }}
@@ -35,7 +35,7 @@ export default function ExperienceSection() {
               {/* Timeline Dot */}
               <div className="absolute -left-20 top-6 w-4 h-4 bg-secondary rounded-full border-4 border-white hidden md:block"></div>
               
-              <div className="bg-white rounded-xl p-8 shadow-lg card-hover">
+              <div className="white-box p-6 sm:p-8 card-hover">
                 <div className="flex flex-wrap justify-between items-start mb-4">
                   <div>
                     <h3 className="text-xl font-bold text-primary mb-2">Sales and Marketing Assistant (Part-Time)</h3>

@@ -100,8 +100,8 @@ export default function ContactSection() {
   ];
 
   return (
-    <section id="contact" className="py-16 bg-gray-50">
-      <div className="container mx-auto px-6">
+    <section id="contact" className="mobile-section bg-gray-50">
+      <div className="container mx-auto mobile-container">
         <motion.h2 
           ref={ref}
           initial={{ opacity: 0, y: 30 }}
@@ -114,14 +114,14 @@ export default function ContactSection() {
         </motion.h2>
         
         <div className="max-w-4xl mx-auto">
-          <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-            <div className="md:flex">
+          <div className="white-box overflow-hidden border border-gray-200">
+            <div className="lg:flex">
               {/* Contact Info */}
               <motion.div 
                 initial={{ opacity: 0, x: -30 }}
                 animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="md:w-1/2 bg-primary text-white p-8"
+                className="lg:w-1/2 bg-primary text-white p-6 sm:p-8"
               >
                 <h3 className="text-2xl font-bold mb-6">Let's Connect!</h3>
                 <p className="mb-8 text-blue-100">
@@ -182,7 +182,7 @@ export default function ContactSection() {
                 initial={{ opacity: 0, x: 30 }}
                 animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 30 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
-                className="md:w-1/2 p-8"
+                className="lg:w-1/2 p-6 sm:p-8"
               >
                 <Form {...form}>
                   <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">

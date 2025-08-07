@@ -7,8 +7,8 @@ export default function AboutSection() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="about" className="py-16 bg-white">
-      <div className="container mx-auto px-6">
+    <section id="about" className="mobile-section bg-white">
+      <div className="container mx-auto mobile-container">
         <motion.h2 
           ref={ref}
           initial={{ opacity: 0, y: 30 }}
@@ -25,7 +25,7 @@ export default function AboutSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="bg-neutral rounded-xl p-8 card-hover"
+            className="white-box p-6 sm:p-8 card-hover"
           >
             <p className="text-lg leading-relaxed text-dark mb-6">
               Dynamic MBA candidate in Marketing and Human Resources with hands-on experience 

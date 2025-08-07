@@ -36,24 +36,24 @@ export default function Home() {
       <Navigation />
       <main>
         <HeroSection />
-        <div className="bg-white py-6 shadow-lg">
-          <div className="container mx-auto px-6">
-            <div className="flex flex-wrap justify-center md:justify-between items-center text-sm md:text-base">
-              <div className="flex items-center mb-2 md:mb-0 mr-6">
+        <div className="bg-white py-4 sm:py-6 shadow-lg border-b border-gray-100">
+          <div className="container mx-auto mobile-container">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-sm md:text-base">
+              <div className="flex items-center justify-center sm:justify-start">
                 <i className="fas fa-phone text-primary mr-2"></i>
                 <span className="text-dark">+91 9789296263</span>
               </div>
-              <div className="flex items-center mb-2 md:mb-0 mr-6">
+              <div className="flex items-center justify-center sm:justify-start">
                 <i className="fas fa-envelope text-primary mr-2"></i>
-                <a href="mailto:sugalechristo2001@gmail.com" className="text-dark hover:text-secondary transition-colors">
+                <a href="mailto:sugalechristo2001@gmail.com" className="text-dark hover:text-secondary transition-colors text-xs sm:text-sm">
                   sugalechristo2001@gmail.com
                 </a>
               </div>
-              <div className="flex items-center mb-2 md:mb-0 mr-6">
+              <div className="flex items-center justify-center sm:justify-start">
                 <i className="fas fa-map-marker-alt text-primary mr-2"></i>
-                <span className="text-dark">Colachel, Kanyakumari District, Tamil Nadu</span>
+                <span className="text-dark text-xs sm:text-sm">Colachel, Tamil Nadu</span>
               </div>
-              <div className="flex items-center">
+              <div className="flex items-center justify-center sm:justify-start">
                 <i className="fas fa-calendar text-primary mr-2"></i>
                 <span className="text-dark">DOB: 03/11/2001</span>
               </div>

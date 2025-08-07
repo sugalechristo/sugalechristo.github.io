@@ -126,11 +126,11 @@
   }
   
   .card-hover {
-    @apply transition-all duration-300 ease-in-out;
+    @apply transition-all duration-300 ease-in-out border border-gray-200;
   }
   
   .card-hover:hover {
-    @apply transform -translate-y-1 shadow-xl;
+    @apply transform -translate-y-1 shadow-xl border-blue-300;
   }
   
   .nav-link {
@@ -139,6 +139,24 @@
   
   .nav-link:hover {
     @apply text-secondary transform -translate-y-0.5;
+  }
+
+  /* Mobile-first white boxes with borders */
+  .white-box {
+    @apply bg-white rounded-xl border border-gray-200 shadow-sm transition-all duration-300;
+  }
+  
+  .white-box:hover {
+    @apply shadow-lg border-blue-300;
+  }
+
+  /* Mobile-optimized spacing */
+  .mobile-container {
+    @apply px-4 sm:px-6 lg:px-8;
+  }
+  
+  .mobile-section {
+    @apply py-12 sm:py-16;
   }
 }
 

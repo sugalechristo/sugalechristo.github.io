@@ -62,8 +62,8 @@ export default function SkillsSection() {
   ];
 
   return (
-    <section id="skills" className="py-16 bg-gray-50">
-      <div className="container mx-auto px-6">
+    <section id="skills" className="mobile-section bg-gray-50">
+      <div className="container mx-auto mobile-container">
         <motion.h2 
           ref={ref}
           initial={{ opacity: 0, y: 30 }}
@@ -83,7 +83,7 @@ export default function SkillsSection() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
                 transition={{ duration: 0.6, delay: 0.2 + (index * 0.1) }}
-                className="bg-white rounded-xl p-8 shadow-lg card-hover"
+                className="white-box p-6 sm:p-8 card-hover"
               >
                 <div className="flex items-center mb-6">
                   <div className={`${category.color} p-3 rounded-lg mr-4`}>
@@ -114,7 +114,7 @@ export default function SkillsSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
             transition={{ duration: 0.6, delay: 0.6 }}
-            className="mt-8 bg-white rounded-xl p-8 shadow-lg card-hover"
+            className="mt-8 white-box p-6 sm:p-8 card-hover"
           >
             <h3 className="text-xl font-bold text-primary mb-6 text-center">
               <i className="fas fa-chart-bar mr-2"></i>
@@ -143,7 +143,7 @@ export default function SkillsSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
             transition={{ duration: 0.6, delay: 0.8 }}
-            className="mt-8 bg-white rounded-xl p-8 shadow-lg card-hover text-center"
+            className="mt-8 white-box p-6 sm:p-8 card-hover text-center"
           >
             <h3 className="text-xl font-bold text-primary mb-6">
               <i className="fas fa-language mr-2"></i>
